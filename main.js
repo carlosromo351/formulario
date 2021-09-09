@@ -17,8 +17,11 @@ var $clave=document.getElementsById('clav').value
 var $VERIFIQUE=document.getElementsById('$VERIFIQUE').value
 
 const dataUser=new dataRegister($Nombres,$Apellidos,$Tipodedocumento,$numerodedocumento,$Movil,$clave)
-
+const nombreCompleto=dataUser.nombreCompleto()
+alert(`hola${nombreCompleto}`)
 console.log(dataUser)
+
+
 
 }
 class dataRegister{
@@ -41,7 +44,12 @@ class dataRegister{
          this.numerodedocumento=Pnumerodedocumento
          this.Movil=PMovil
          this.clave.Pclave
-    }     
+    }    
+    
+    
+    nombreCompleto(){
+        return this.Nombres+''+this.Apellidos
+    }
          
 }
 
